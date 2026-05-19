@@ -8,6 +8,7 @@ localhost-server/obj/
 # Temporary files
 .tempmediaStorage/
 *.log
+*.url
 
 # Agent files
 .agents/

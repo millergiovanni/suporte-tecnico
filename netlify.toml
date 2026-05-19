@@ -1,0 +1,9 @@
+[build]
+  publish = "suporte-tecnico-main"
+
+# Configurações para habilitar Pretty URLs (URLs Limpas) e processamento adequado
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true

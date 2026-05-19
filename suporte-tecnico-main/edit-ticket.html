@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSupport - Editar Chamado</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="brand">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0p8fUde1sn_MK9l9O2smeBiwyy1yNa4UhtJX_V-CCC6iG_sXNb9IZZAmuhzIdVjWncdraLbmzW4h2gXPx8oVTPiZp9xBZ-h-wo4YfP7EmsRV7Imj0v4DLWlPN9iUi3vOx-WAmaaz7f2W7W8mE4Lor4Oljc1UF9bLrPipIeD9822XS3ZqSgBH34JWkj2tmfZ4fr_Fbr2qEOe8hXJkQD-hV8qIqPk8EaurDnLrMkPfsR81x5T0WwV8EPoIvCkP2sFrrZvU5yWrGFXk" alt="TechSupport Logo" class="logo">
+                <div class="brand-text">
+                    <h1 class="title-sm">TechSupport</h1>
+                    <span class="body-sm opacity-70">Central de Atendimento</span>
+                </div>
+            </div>
+            <a href="new-ticket.html" class="btn btn-primary btn-new-ticket">
+                <span class="material-symbols-outlined">add</span>
+                <span class="nav-text">Novo Chamado</span>
+            </a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="nav-text">Painel Geral</span>
+            </a>
+            <a href="my-tickets.html" class="nav-item">
+                <span class="material-symbols-outlined">confirmation_number</span>
+                <span class="nav-text">Meus Chamados</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <span class="material-symbols-outlined">bar_chart</span>
+                <span class="nav-text">Relatórios</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <span class="material-symbols-outlined">settings</span>
+                <span class="nav-text">Configurações</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM226g6mptXd4lUjm3uo5LldodVvg85jAFhDvYdLKP69obGIuufsfctYgQuFeK392fWTAjes71m2bsLOeKC4AYLpXJ--A_G0Onr7hX7O9M3rjHsBQ1LxYspAcETaY2qi7AII77FHUDfy9pcTNyzEP2s-Ya24elKb4HTz3H2u-HBqSyF0Kq-TdV25qnghioDfT4KveJtlHEUhC2zTXcwARSGoxntRHFBimLK9n-4gBR008_io0-9iiW7LVVMo5Q60K9-l_rdERdtLQ" alt="Avatar" class="avatar">
+                <div class="user-info nav-text">
+                    <p class="body-sm font-semibold">Agent 007</p>
+                    <p class="text-xs opacity-70">Support Lead</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <button class="menu-toggle md-hidden" id="menuToggle">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+            <div class="top-bar-actions">
+                <button class="icon-btn relative">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="badge-dot"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="page-content">
+            <div class="page-header">
+                <div class="page-title">
+                    <nav class="breadcrumb body-sm">
+                        <a href="index.html">Painel Geral</a> / <span>Editar Chamado</span>
+                    </nav>
+                    <h2 class="headline-md mt-sm">Editar Chamado</h2>
+                    <p class="body-sm text-on-surface-variant">Altere as informações, status e adicione ações realizadas.</p>
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <section class="form-section">
+                <div class="card form-card">
+                    <form action="#" id="editTicketForm">
+                        <input type="hidden" id="ticketId" name="ticketId">
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Assunto / Título do Problema</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Ex: Falha na conexão com o servidor" required>
+                        </div>
+
+                        <div class="grid-2 gap-md">
+                            <div class="form-group">
+                                <label for="category" class="form-label">Categoria</label>
+                                <select id="category" name="category" class="form-control form-select" required>
+                                    <option value="" disabled selected>Selecione uma categoria</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="priority" class="form-label">Prioridade</label>
+                                <select id="priority" name="priority" class="form-control form-select" required>
+                                    <option value="baixa">Baixa</option>
+                                    <option value="media" selected>Média</option>
+                                    <option value="alta">Alta</option>
+                                    <option value="critica">Crítica / Urgente</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid-2 gap-md">
+                            <div class="form-group">
+                                <label for="status" class="form-label">Status</label>
+                                <select id="status" name="status" class="form-control form-select" required>
+                                    <!-- Options will be populated via JS -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="created_at" class="form-label">Data de Abertura</label>
+                                <input type="text" id="created_at" name="created_at" class="form-control" disabled>
+                            </div>
+                        </div>
+                        <div class="grid-2 gap-md">
+                            <div class="form-group">
+                                <label for="closed_at" class="form-label">Data de Fechamento</label>
+                                <input type="text" id="closed_at" name="closed_at" class="form-control" disabled placeholder="Em aberto">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description" class="form-label">Descrição Detalhada</label>
+                            <textarea id="description" name="description" class="form-control" placeholder="Descreva o problema com o máximo de detalhes possível..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="actions" class="form-label">Ações Realizadas (Admin)</label>
+                            <textarea id="actions" name="actions" class="form-control" placeholder="Descreva as ações realizadas neste chamado..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Anexos (Opcional)</label>
+                            <div class="file-upload-zone" id="dropzone">
+                                <span class="material-symbols-outlined">cloud_upload</span>
+                                <p class="body-sm">Clique ou arraste arquivos para anexar (Max 5MB)</p>
+                                <input type="file" id="fileInput" class="hidden" multiple>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <a href="index.html" class="btn btn-secondary">Cancelar</a>
+                            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- App Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-client.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSupport - Relatórios</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="brand">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0p8fUde1sn_MK9l9O2smeBiwyy1yNa4UhtJX_V-CCC6iG_sXNb9IZZAmuhzIdVjWncdraLbmzW4h2gXPx8oVTPiZp9xBZ-h-wo4YfP7EmsRV7Imj0v4DLWlPN9iUi3vOx-WAmaaz7f2W7W8mE4Lor4Oljc1UF9bLrPipIeD9822XS3ZqSgBH34JWkj2tmfZ4fr_Fbr2qEOe8hXJkQD-hV8qIqPk8EaurDnLrMkPfsR81x5T0WwV8EPoIvCkP2sFrrZvU5yWrGFXk" alt="TechSupport Logo" class="logo">
+                <div class="brand-text">
+                    <h1 class="title-sm">TechSupport</h1>
+                    <span class="body-sm opacity-70">Central de Atendimento</span>
+                </div>
+            </div>
+            <a href="new-ticket.html" class="btn btn-primary btn-new-ticket">
+                <span class="material-symbols-outlined">add</span>
+                <span class="nav-text">Novo Chamado</span>
+            </a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="nav-text">Painel Geral</span>
+            </a>
+            <a href="my-tickets.html" class="nav-item">
+                <span class="material-symbols-outlined">confirmation_number</span>
+                <span class="nav-text">Meus Chamados</span>
+            </a>
+            <a href="reports.html" class="nav-item active">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+                <span class="nav-text">Relatórios</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <span class="material-symbols-outlined">settings</span>
+                <span class="nav-text">Configurações</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM226g6mptXd4lUjm3uo5LldodVvg85jAFhDvYdLKP69obGIuufsfctYgQuFeK392fWTAjes71m2bsLOeKC4AYLpXJ--A_G0Onr7hX7O9M3rjHsBQ1LxYspAcETaY2qi7AII77FHUDfy9pcTNyzEP2s-Ya24elKb4HTz3H2u-HBqSyF0Kq-TdV25qnghioDfT4KveJtlHEUhC2zTXcwARSGoxntRHFBimLK9n-4gBR008_io0-9iiW7LVVMo5Q60K9-l_rdERdtLQ" alt="Avatar" class="avatar">
+                <div class="user-info nav-text">
+                    <p class="body-sm font-semibold">Agent 007</p>
+                    <p class="text-xs opacity-70">Support Lead</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <button class="menu-toggle md-hidden" id="menuToggle">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+            <div class="top-bar-actions">
+                <button class="btn btn-secondary sm-hidden">
+                    <span class="material-symbols-outlined">download</span>
+                    Exportar PDF
+                </button>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <div class="page-header">
+                <div class="page-title">
+                    <h2 class="headline-md">Relatórios de Desempenho</h2>
+                    <p class="body-sm text-on-surface-variant">Análise estatística do suporte técnico.</p>
+                </div>
+                <div class="header-actions">
+                    <select class="form-control form-select py-1.5" style="width: auto;">
+                        <option>Últimos 30 dias</option>
+                        <option>Este mês</option>
+                        <option>Este ano</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="card">
+                    <span class="label-caps opacity-70">Tempo Médio de Resposta</span>
+                    <h3 class="display-lg mt-sm">2h 45m</h3>
+                    <p class="body-sm text-on-error mt-sm"><span class="badge badge-primary">-15% vs mês anterior</span></p>
+                </div>
+                <div class="card">
+                    <span class="label-caps opacity-70">Taxa de Resolução</span>
+                    <h3 class="display-lg mt-sm">94.2%</h3>
+                    <p class="body-sm text-primary mt-sm"><span class="badge badge-primary">+2% vs mês anterior</span></p>
+                </div>
+                <div class="card">
+                    <span class="label-caps opacity-70">Satisfação do Cliente</span>
+                    <h3 class="display-lg mt-sm">4.8/5.0</h3>
+                    <div class="flex mt-sm text-primary">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star_half</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="label-caps opacity-70">SLA Cumprido</span>
+                    <h3 class="display-lg mt-sm">98.5%</h3>
+                    <p class="body-sm text-primary mt-sm"><span class="badge-outline">Meta: 95%</span></p>
+                </div>
+            </div>
+
+            <div class="grid-2 mt-lg">
+                <div class="card">
+                    <h3 class="title-sm mb-lg">Chamados por Categoria</h3>
+                    <div class="chart-placeholder">
+                        <div class="chart-bar-group">
+                            <span class="body-sm w-32">TI</span>
+                            <div class="chart-bar-bg flex-1"><div class="chart-bar" style="width: 70%; background: var(--primary);"></div></div>
+                            <span class="body-sm w-8">70</span>
+                        </div>
+                        <div class="chart-bar-group">
+                            <span class="body-sm w-32">Elétrica</span>
+                            <div class="chart-bar-bg flex-1"><div class="chart-bar" style="width: 45%; background: var(--secondary);"></div></div>
+                            <span class="body-sm w-8">45</span>
+                        </div>
+                        <div class="chart-bar-group">
+                            <span class="body-sm w-32">Predial</span>
+                            <div class="chart-bar-bg flex-1"><div class="chart-bar" style="width: 30%; background: var(--outline);"></div></div>
+                            <span class="body-sm w-8">30</span>
+                        </div>
+                        <div class="chart-bar-group">
+                            <span class="body-sm w-32">Segurança</span>
+                            <div class="chart-bar-bg flex-1"><div class="chart-bar" style="width: 20%; background: var(--tertiary);"></div></div>
+                            <span class="body-sm w-8">20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="title-sm mb-lg">Volume de Chamados (Semana)</h3>
+                    <div class="chart-placeholder h-48 flex items-end justify-between px-md">
+                        <div class="flex flex-col items-center gap-sm">
+                            <div class="chart-col" style="height: 60px; width: 30px; background: var(--primary-fixed-dim);"></div>
+                            <span class="body-sm">Seg</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-sm">
+                            <div class="chart-col" style="height: 100px; width: 30px; background: var(--primary);"></div>
+                            <span class="body-sm">Ter</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-sm">
+                            <div class="chart-col" style="height: 80px; width: 30px; background: var(--primary-fixed-dim);"></div>
+                            <span class="body-sm">Qua</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-sm">
+                            <div class="chart-col" style="height: 120px; width: 30px; background: var(--primary);"></div>
+                            <span class="body-sm">Qui</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-sm">
+                            <div class="chart-col" style="height: 50px; width: 30px; background: var(--primary-fixed-dim);"></div>
+                            <span class="body-sm">Sex</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-client.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

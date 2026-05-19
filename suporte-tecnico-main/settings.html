@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSupport - Configurações</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="brand">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0p8fUde1sn_MK9l9O2smeBiwyy1yNa4UhtJX_V-CCC6iG_sXNb9IZZAmuhzIdVjWncdraLbmzW4h2gXPx8oVTPiZp9xBZ-h-wo4YfP7EmsRV7Imj0v4DLWlPN9iUi3vOx-WAmaaz7f2W7W8mE4Lor4Oljc1UF9bLrPipIeD9822XS3ZqSgBH34JWkj2tmfZ4fr_Fbr2qEOe8hXJkQD-hV8qIqPk8EaurDnLrMkPfsR81x5T0WwV8EPoIvCkP2sFrrZvU5yWrGFXk" alt="TechSupport Logo" class="logo">
+                <div class="brand-text">
+                    <h1 class="title-sm">TechSupport</h1>
+                    <span class="body-sm opacity-70">Central de Atendimento</span>
+                </div>
+            </div>
+            <a href="new-ticket.html" class="btn btn-primary btn-new-ticket">
+                <span class="material-symbols-outlined">add</span>
+                <span class="nav-text">Novo Chamado</span>
+            </a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="nav-text">Painel Geral</span>
+            </a>
+            <a href="my-tickets.html" class="nav-item">
+                <span class="material-symbols-outlined">confirmation_number</span>
+                <span class="nav-text">Meus Chamados</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <span class="material-symbols-outlined">bar_chart</span>
+                <span class="nav-text">Relatórios</span>
+            </a>
+            <a href="settings.html" class="nav-item active">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+                <span class="nav-text">Configurações</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM226g6mptXd4lUjm3uo5LldodVvg85jAFhDvYdLKP69obGIuufsfctYgQuFeK392fWTAjes71m2bsLOeKC4AYLpXJ--A_G0Onr7hX7O9M3rjHsBQ1LxYspAcETaY2qi7AII77FHUDfy9pcTNyzEP2s-Ya24elKb4HTz3H2u-HBqSyF0Kq-TdV25qnghioDfT4KveJtlHEUhC2zTXcwARSGoxntRHFBimLK9n-4gBR008_io0-9iiW7LVVMo5Q60K9-l_rdERdtLQ" alt="Avatar" class="avatar">
+                <div class="user-info nav-text">
+                    <p class="body-sm font-semibold">Agent 007</p>
+                    <p class="text-xs opacity-70">Support Lead</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <button class="menu-toggle md-hidden" id="menuToggle">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <div class="page-header">
+                <div class="page-title">
+                    <h2 class="headline-md">Configurações</h2>
+                    <p class="body-sm text-on-surface-variant">Gerencie suas preferências de conta e sistema.</p>
+                </div>
+            </div>
+
+            <div class="settings-layout">
+                <!-- Settings Tabs -->
+                <nav class="settings-nav mb-lg" id="settingsTabs">
+                    <button class="filter-pill active" data-tab="profile">Perfil</button>
+                    <button class="filter-pill" data-tab="notifications">Notificações</button>
+                    <button class="filter-pill" data-tab="security">Segurança</button>
+                    <button class="filter-pill" data-tab="admin">Administração</button>
+                </nav>
+
+                <!-- Profile Tab -->
+                <div class="tab-content active" id="profile">
+                    <div class="card max-w-md">
+                        <h3 class="title-sm mb-lg">Informações do Perfil</h3>
+                        
+                        <div class="flex items-center gap-lg mb-xl">
+                            <div class="relative">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM226g6mptXd4lUjm3uo5LldodVvg85jAFhDvYdLKP69obGIuufsfctYgQuFeK392fWTAjes71m2bsLOeKC4AYLpXJ--A_G0Onr7hX7O9M3rjHsBQ1LxYspAcETaY2qi7AII77FHUDfy9pcTNyzEP2s-Ya24elKb4HTz3H2u-HBqSyF0Kq-TdV25qnghioDfT4KveJtlHEUhC2zTXcwARSGoxntRHFBimLK9n-4gBR008_io0-9iiW7LVVMo5Q60K9-l_rdERdtLQ" alt="User Avatar" style="width: 80px; height: 80px; border-radius: 50%;">
+                                <button class="btn btn-secondary icon-btn-sm absolute" style="bottom: 0; right: 0; background: white; shadow: var(--shadow-level-1);">
+                                    <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+                                </button>
+                            </div>
+                            <div>
+                                <h4 class="body-md font-semibold">Agent 007</h4>
+                                <p class="body-sm opacity-70">Líder de Suporte Técnico</p>
+                            </div>
+                        </div>
+
+                        <form action="#">
+                            <div class="grid-2">
+                                <div class="form-group">
+                                    <label class="form-label">Nome Completo</label>
+                                    <input type="text" class="form-control" value="Agent 007">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" value="agent007@techsupport.com">
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary">Descartar</button>
+                                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Notifications Tab -->
+                <div class="tab-content" id="notifications">
+                    <div class="card max-w-md">
+                        <h3 class="title-sm mb-lg">Preferências de Notificação</h3>
+                        <div class="flex flex-col gap-md">
+                            <div class="flex items-center justify-between p-md bg-surface-container-low rounded-md">
+                                <div>
+                                    <p class="body-sm font-semibold">Notificações por E-mail</p>
+                                    <p class="text-xs opacity-70">Receber alertas de novos chamados por e-mail.</p>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                            <div class="flex items-center justify-between p-md bg-surface-container-low rounded-md">
+                                <div>
+                                    <p class="body-sm font-semibold">Alertas de SLA</p>
+                                    <p class="text-xs opacity-70">Avisar quando um ticket estiver próximo do prazo.</p>
+                                </div>
+                                <div class="toggle-switch active"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Tab -->
+                <div class="tab-content" id="security">
+                    <div class="card max-w-md">
+                        <h3 class="title-sm mb-lg">Configurações de Segurança</h3>
+                        <form action="#">
+                            <div class="form-group">
+                                <label class="form-label">Senha Atual</label>
+                                <input type="password" class="form-control" placeholder="••••••••">
+                            </div>
+                            <div class="grid-2">
+                                <div class="form-group">
+                                    <label class="form-label">Nova Senha</label>
+                                    <input type="password" class="form-control" placeholder="Mínimo 8 caracteres">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Confirmar Nova Senha</label>
+                                    <input type="password" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-md bg-surface-container-low rounded-md mb-xl">
+                                <div>
+                                    <p class="body-sm font-semibold">Autenticação em Duas Etapas (2FA)</p>
+                                    <p class="text-xs opacity-70">Aumente a segurança exigindo um código adicional.</p>
+                                </div>
+                                <button type="button" class="btn btn-secondary btn-sm">Ativar 2FA</button>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Atualizar Senha</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Admin Tab -->
+                <div class="tab-content" id="admin">
+                    <div class="card max-w-md">
+                        <div class="flex justify-between items-center mb-lg">
+                            <h3 class="title-sm">Categorias do Sistema</h3>
+                            <button class="btn btn-primary btn-sm" id="btnAddCategory">
+                                <span class="material-symbols-outlined text-[18px]">add</span>
+                                Nova Categoria
+                            </button>
+                        </div>
+                        <div class="data-table-container mb-xl">
+                            <table class="data-table">
+                                <tbody class="body-sm">
+                                    <tr>
+                                        <td>Informática / TI</td>
+                                        <td class="text-right">
+                                            <button class="icon-btn-sm"><span class="material-symbols-outlined">edit</span></button>
+                                            <button class="icon-btn-sm text-error"><span class="material-symbols-outlined">delete</span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Elétrica</td>
+                                        <td class="text-right">
+                                            <button class="icon-btn-sm"><span class="material-symbols-outlined">edit</span></button>
+                                            <button class="icon-btn-sm text-error"><span class="material-symbols-outlined">delete</span></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="flex justify-between items-center mb-lg">
+                            <h3 class="title-sm">Status de Chamados</h3>
+                            <button class="btn btn-primary btn-sm" id="btnAddStatus">
+                                <span class="material-symbols-outlined text-[18px]">add</span>
+                                Novo Status
+                            </button>
+                        </div>
+                        <div class="data-table-container">
+                            <table class="data-table">
+                                <tbody class="body-sm">
+                                    <tr>
+                                        <td><span class="badge-outline">Pendente</span></td>
+                                        <td class="text-right">
+                                            <button class="icon-btn-sm"><span class="material-symbols-outlined">edit</span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge badge-primary">Em Atendimento</span></td>
+                                        <td class="text-right">
+                                            <button class="icon-btn-sm"><span class="material-symbols-outlined">edit</span></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-client.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

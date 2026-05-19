@@ -1,0 +1,13 @@
+# VS Code
+.vscode/
+
+# Local server bin/obj
+localhost-server/bin/
+localhost-server/obj/
+
+# Temporary files
+.tempmediaStorage/
+*.log
+
+# Agent files
+.agents/

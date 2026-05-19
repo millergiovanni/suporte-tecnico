@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSupport - Meus Chamados</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="brand">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0p8fUde1sn_MK9l9O2smeBiwyy1yNa4UhtJX_V-CCC6iG_sXNb9IZZAmuhzIdVjWncdraLbmzW4h2gXPx8oVTPiZp9xBZ-h-wo4YfP7EmsRV7Imj0v4DLWlPN9iUi3vOx-WAmaaz7f2W7W8mE4Lor4Oljc1UF9bLrPipIeD9822XS3ZqSgBH34JWkj2tmfZ4fr_Fbr2qEOe8hXJkQD-hV8qIqPk8EaurDnLrMkPfsR81x5T0WwV8EPoIvCkP2sFrrZvU5yWrGFXk" alt="TechSupport Logo" class="logo">
+                <div class="brand-text">
+                    <h1 class="title-sm">TechSupport</h1>
+                    <span class="body-sm opacity-70">Central de Atendimento</span>
+                </div>
+            </div>
+            <a href="new-ticket.html" class="btn btn-primary btn-new-ticket">
+                <span class="material-symbols-outlined">add</span>
+                <span class="nav-text">Novo Chamado</span>
+            </a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span class="nav-text">Painel Geral</span>
+            </a>
+            <a href="my-tickets.html" class="nav-item active">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+                <span class="nav-text">Meus Chamados</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <span class="material-symbols-outlined">bar_chart</span>
+                <span class="nav-text">Relatórios</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <span class="material-symbols-outlined">settings</span>
+                <span class="nav-text">Configurações</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM226g6mptXd4lUjm3uo5LldodVvg85jAFhDvYdLKP69obGIuufsfctYgQuFeK392fWTAjes71m2bsLOeKC4AYLpXJ--A_G0Onr7hX7O9M3rjHsBQ1LxYspAcETaY2qi7AII77FHUDfy9pcTNyzEP2s-Ya24elKb4HTz3H2u-HBqSyF0Kq-TdV25qnghioDfT4KveJtlHEUhC2zTXcwARSGoxntRHFBimLK9n-4gBR008_io0-9iiW7LVVMo5Q60K9-l_rdERdtLQ" alt="Avatar" class="avatar">
+                <div class="user-info nav-text">
+                    <p class="body-sm font-semibold">Agent 007</p>
+                    <p class="text-xs opacity-70">Support Lead</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <button class="menu-toggle md-hidden" id="menuToggle">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="search-bar">
+                    <input type="text" id="ticketSearchInput" placeholder="Buscar chamados por título ou usuário">
+                    <button type="button" id="ticketSearchBtn" style="background: transparent; border: none; cursor: pointer; display: flex; align-items: center; padding: 0;">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                </div>
+            </div>
+            <div class="top-bar-actions">
+                <button class="icon-btn relative">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="badge-dot"></span>
+                </button>
+                <div class="user-profile-sm md-hidden">
+                     <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM226g6mptXd4lUjm3uo5LldodVvg85jAFhDvYdLKP69obGIuufsfctYgQuFeK392fWTAjes71m2bsLOeKC4AYLpXJ--A_G0Onr7hX7O9M3rjHsBQ1LxYspAcETaY2qi7AII77FHUDfy9pcTNyzEP2s-Ya24elKb4HTz3H2u-HBqSyF0Kq-TdV25qnghioDfT4KveJtlHEUhC2zTXcwARSGoxntRHFBimLK9n-4gBR008_io0-9iiW7LVVMo5Q60K9-l_rdERdtLQ" alt="Avatar" class="avatar">
+                </div>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <div class="page-header">
+                <div class="page-title">
+                    <h2 class="headline-md">Meus Chamados</h2>
+                    <p class="body-sm text-on-surface-variant">Gerencie os tickets atribuídos a você ou criados por você.</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary sm-hidden">
+                        <span class="material-symbols-outlined">filter_list</span>
+                        Filtros
+                    </button>
+                    <a href="new-ticket.html" class="btn btn-primary">
+                        <span class="material-symbols-outlined">add</span>
+                        Novo Chamado
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Overview (Smaller) -->
+            <div class="metrics-grid grid-3">
+                <div class="card metric-card-sm">
+                    <span class="label-caps opacity-70">Aguardando</span>
+                    <div class="flex items-center gap-sm">
+                        <span class="title-sm">12</span>
+                        <span class="badge badge-surface">Ativos</span>
+                    </div>
+                </div>
+                <div class="card metric-card-sm">
+                    <span class="label-caps opacity-70">Em Execução</span>
+                    <div class="flex items-center gap-sm">
+                        <span class="title-sm">05</span>
+                        <span class="badge badge-primary">Prioridade</span>
+                    </div>
+                </div>
+                <div class="card metric-card-sm">
+                    <span class="label-caps opacity-70">Pendentes</span>
+                    <div class="flex items-center gap-sm">
+                        <span class="title-sm">03</span>
+                        <span class="badge badge-tertiary">Peças</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <section class="table-section mt-lg">
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th class="label-caps">ID/Ticket</th>
+                                <th class="label-caps">Assunto</th>
+                                <th class="label-caps">Categoria</th>
+                                <th class="label-caps">Prioridade</th>
+                                <th class="label-caps">Status</th>
+                                <th class="label-caps text-right">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody class="body-sm">
+                            <!-- Os chamados serão carregados dinamicamente via script.js -->
+                            <tr>
+                                <td colspan="6" style="text-align: center; padding: 40px;">Carregando seus chamados...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-client.js"></script>
+    <script src="script.js?v=1.1"></script>
+</body>
+</html>
